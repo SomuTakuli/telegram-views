@@ -123,7 +123,7 @@ class Telegram:
         Token Error:  {self.token_error}
         Cookie Error: {self.cookie_error}
             ''')
-            sleep(0.1);system('cls' if name=='nt' else 'clear')
+            sleep(0.3);system('cls' if name=='nt' else 'clear')
 
 
 class Auto:
