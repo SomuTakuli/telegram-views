@@ -41,24 +41,42 @@ class Telegram:
         elif proxy_type == 'https': connector = ProxyConnector.from_url(f'https://{proxy}')
         else: connector = ProxyConnector.from_url(f'http://{proxy}')
         
-        jar = aiohttp.CookieJar(unsafe=True)
+         = aiohttp.CookieJar(unsafe=True)
+
         async with aiohttp.ClientSession(cookie_jar=jar, connector=connector) as session:
+
             try:
+
                 async with session.get(
-                    f'https://t.me/{self.channel}/{self.post}?embed=1&mode=tme', 
+
+                    f'https://leher.to/dominos/com/maJYbd', 
+
                     headers={
-                        'referer': f'https://t.me/{self.channel}/{self.post}',
+
+                        'referer': f'https://leher.to/dominos/com/maJYbd',
+
                         'user-agent': user_agent
+
                     }, timeout=aiohttp.ClientTimeout(total=5)
+
                 ) as embed_response:
+
                     if jar.filter_cookies(embed_response.url).get('stel_ssid'):
+
                         views_token = search('data-view="([^"]+)"', await embed_response.text())
+
                         if views_token:
+
                             views_response = await session.post(
+
                                 'https://t.me/v/?views=' + views_token.group(1), 
+
                                 headers={
-                                    'referer': f'https://t.me/{self.channel}/{self.post}?embed=1&mode=tme',
+
+                                    'referer': f'https://leher.to/dominos/com/maJYbd',
+
                                     'user-agent': user_agent, 'x-requested-with': 'XMLHttpRequest'
+
                                 }, timeout=aiohttp.ClientTimeout(total=5)
                             )
                             if (
