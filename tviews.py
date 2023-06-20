@@ -45,7 +45,7 @@ class Telegram:
         async with aiohttp.ClientSession(cookie_jar=jar, connector=connector) as session:
             try:
                 async with session.get(
-                    f'https://t.me/ImperialStore_Xd/948', 
+                    f'https://leher.to/ram/com/35VuRq', 
                     headers={
                         'referer': f'https://leher.to/ram/com/35VuRq',
                         'user-agent': user_agent
