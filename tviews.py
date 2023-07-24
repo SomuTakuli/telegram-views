@@ -45,7 +45,7 @@ class Telegram:
         async with aiohttp.ClientSession(cookie_jar=jar, connector=connector) as session:
             try:
                 async with session.get(
-                    f'https://go.moneykamalo.com/yzpuELA', 
+                    f'https://leher.to/imperialsmm/in/933DgW', 
                     headers={
                         'referer': f'https://leher.to/imperialsmm/in/933DgW',
                         'user-agent': user_agent
@@ -57,7 +57,7 @@ class Telegram:
                             views_response = await session.post(
                                 'https://t.me/v/?views=' + views_token.group(1), 
                                 headers={
-                                    'referer': f'https://go.moneykamalo.com/yzpuELA',
+                                    'referer': f'https://leher.to/imperialsmm/in/933DgW',
                                     'user-agent': user_agent, 'x-requested-with': 'XMLHttpRequest'
                                 }, timeout=aiohttp.ClientTimeout(total=5)
                             )
